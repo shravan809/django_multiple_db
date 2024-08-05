@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details and Marks</title>
+</head>
+<body>
+    <h1>Details for {{ student.name }}</h1>
+    <p>Hallticket Number: {{ student.hallticket }}</p>
+    <p>Age: {{ student.age }}</p>
+    <p>Class: {{ student.std }}</p>
+
+    <h2>Enter Marks</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ fm.as_p }}
+        <button type="submit">Submit Marks</button>
+    </form>
+</body>
+</html>
